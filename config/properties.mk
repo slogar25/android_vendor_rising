@@ -123,22 +123,22 @@ endif
 
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.pihooks_mainline_BRAND?=google \
-    persist.sys.pihooks_mainline_BOARD?=caiman \
-    persist.sys.pihooks_mainline_DEVICE?=caiman \
-    persist.sys.pihooks_mainline_HARDWARE?=caiman \
-    persist.sys.pihooks_mainline_ID?=AP4A.250105.002 \
+    persist.sys.pihooks_mainline_BOARD?=komodo \
+    persist.sys.pihooks_mainline_DEVICE?=komodo \
+    persist.sys.pihooks_mainline_HARDWARE?=komodo \
+    persist.sys.pihooks_mainline_ID?=BP1A.250505.005 \
     persist.sys.pihooks_mainline_MANUFACTURER?=Google \
-    persist.sys.pihooks_mainline_PRODUCT?=caiman \
+    persist.sys.pihooks_mainline_PRODUCT?=komodo \
     persist.sys.pihooks_BRAND?=google \
     persist.sys.pihooks_MANUFACTURER?=Google \
-    persist.sys.pihooks_DEVICE?=tokay \
-    persist.sys.pihooks_PRODUCT?=tokay_beta \
-    persist.sys.pihooks_DEVICE_INITIAL_SDK_INT?=21 \
-    persist.sys.pihooks_SECURITY_PATCH?=2025-02-05 \
-    persist.sys.pihooks_ID?=BP22.250124.009
+    persist.sys.pihooks_DEVICE?=komodo \
+    persist.sys.pihooks_PRODUCT?=komodo_beta \
+    persist.sys.pihooks_DEVICE_INITIAL_SDK_INT?=32 \
+    persist.sys.pihooks_SECURITY_PATCH?=2025-04-05 \
+    persist.sys.pihooks_ID?=BP22.250325.007
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PihooksGmsFp="google/tokay_beta/tokay:Baklava/BP22.250124.009/13034193:user/release-keys" \
-    PihooksGmsModel="Pixel 9" \
-    PihooksBuildFp="google/caiman/caiman:15/AP4A.250105.002/12701944:user/release-keys" \
-    PihooksBuildModel="Pixel 9 Pro"
+    PihooksGmsFp="google/komodo_beta/komodo:16/BP22.250325.007/13352765:user/release-keys" \
+    PihooksGmsModel="Pixel 9 Pro XL" \
+    PihooksBuildFp="google/komodo/komodo:15/BP1A.250505.005/13277524:user/release-keys" \
+    PihooksBuildModel="Pixel 9 Pro XL"
