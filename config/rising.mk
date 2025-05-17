@@ -4,12 +4,22 @@ include vendor/rising/config/packages.mk
 include vendor/rising/config/version.mk
 include vendor/rising/overlays/build.mk
 include vendor/rising/prebuilts/prebuilts.mk
-ifeq ($(WITH_PIXEL_OVERLAYS),true)
--include vendor/pixeloverlays/config.mk
-endif
 -include vendor/google/mainline_modules/config.mk
+
+# Pixel additions
+ifeq ($(WITH_GMS),true)
+include vendor/gms/products/gms.mk
+$(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
+$(call inherit-product, vendor/pixel-framework/config.mk)
+$(call inherit-product-if-exists, vendor/pixel-style/config/common.mk)
+
+# Don't dexpreopt prebuilts. (For GMS).
+DONT_DEXPREOPT_PREBUILTS := true
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+endif
+
 ifeq ($(WITH_PIXEL_OVERLAYS),true)
-include vendor/microg/products/gms.mk
+$(call inherit-product-if-exists, vendor/pixeloverlays/config.mk)
 endif
 
 # Adblock
